@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: judge0
+    env: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PORT
+        value: 2358
+    healthCheckPath: /
