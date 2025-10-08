@@ -3,8 +3,8 @@ services:
     name: judge0
     env: docker
     plan: free
-    dockerfilePath: ./Dockerfile
+    dockerCommand: |
+      docker run -p 2358:2358 judge0/judge0:latest
     envVars:
       - key: PORT
         value: 2358
-    healthCheckPath: /
